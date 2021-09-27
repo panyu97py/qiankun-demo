@@ -1,0 +1,96 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 2,
+    "total": 2,
+    "workspacePrefix": "/Users/panyu/Documents/workspace/myCode/vue/qiankun-demo"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@common/utils",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT"
+    },
+    "prefix": "/Users/panyu/Documents/workspace/myCode/vue/qiankun-demo/utils"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "qiankun-demo",
+      "version": "0.1.0",
+      "private": true,
+      "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+      },
+      "workspaces": [
+        "components/*",
+        "hooks/*",
+        "utils"
+      ],
+      "dependencies": {
+        "core-js": "^3.6.5",
+        "vue": "^3.0.0"
+      },
+      "devDependencies": {
+        "@common/react-components": "workspace:*",
+        "@common/vue-components": "workspace:*",
+        "@common/utils": "workspace:*",
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/compiler-sfc": "^3.0.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^7.0.0"
+      },
+      "eslintConfig": {
+        "root": true,
+        "env": {
+          "node": true
+        },
+        "extends": [
+          "plugin:vue/vue3-essential",
+          "eslint:recommended"
+        ],
+        "parserOptions": {
+          "parser": "babel-eslint"
+        },
+        "rules": {}
+      },
+      "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+      ]
+    },
+    "prefix": "/Users/panyu/Documents/workspace/myCode/vue/qiankun-demo"
+  },
+  "3 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/panyu/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/panyu/Documents/workspace/myCode/vue/qiankun-demo/node_modules/.pnpm"
+  },
+  "4 debug pnpm:stage": {
+    "prefix": "/Users/panyu/Documents/workspace/myCode/vue/qiankun-demo",
+    "stage": "resolution_started"
+  },
+  "5 debug pnpm:_dependency_resolved": {
+    "resolution": "link:utils",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@common/utils",
+      "rawSpec": "workspace:*"
+    }
+  },
+  "6 error pnpm": {
+    "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "In : No matching version found for @common/react-components@* inside the workspace",
+      "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+      "stack": "pnpm: In : No matching version found for @common/react-components@* inside the workspace\n    at tryResolveFromWorkspace (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:85060:15)\n    at resolveNpm (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:84962:39)\n    at Object.resolve (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:85174:40)\n    at ctx.requestsQueue.add.priority (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:71363:75)\n    at run (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:71110:90)\n    at PQueue._tryToStartAnother (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:71064:13)\n    at /usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:71123:16\n    at new Promise (<anonymous>)\n    at PQueue.add (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:71105:16)\n    at resolveAndFetch (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:71363:55)"
+    }
+  }
+}
