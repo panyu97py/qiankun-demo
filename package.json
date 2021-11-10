@@ -1,17 +1,21 @@
 {
   "name": "qiankun-demo",
+  "port": 8080,
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@6.15.1",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "module-main:serve": "vue-cli-service serve",
+    "module-vue:serve": "pnpm -C modules/module-vue serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prepare": "husky install"
   },
   "workspaces": [
-    "components/*",
-    "hooks/*",
-    "utils"
+    "common/components/*",
+    "common/modules/*",
+    "common/hooks/*",
+    "modules/*"
   ],
   "lint-staged": {
     "*.{jsx,js}": [
@@ -20,12 +24,15 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-plus": "^1.2.0-beta.3",
+    "qiankun": "^2.5.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
     "@common/react-components": "workspace:*",
-    "@common/vue-components": "workspace:*",
     "@common/utils": "workspace:*",
+    "@common/vue-components": "workspace:*",
+    "@modules/module-vue": "workspace:*",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",

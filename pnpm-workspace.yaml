@@ -1,4 +1,5 @@
 packages:
-  - 'components/**'
-  - 'hooks/**'
-  - utils
+  - 'common/components/**'
+  - 'common/hooks/**'
+  - 'common/utils'
+  - 'modules/*'
